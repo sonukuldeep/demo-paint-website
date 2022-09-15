@@ -1,3 +1,10 @@
+:root {
+    --color-nb2: #e7004c;
+    --color-white: #fff;
+    --color-nb2-bg: #00205b;
+    --color-nb1-text: gray;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,18 +17,16 @@
     justify-items: center;
     padding: 15px 20px;
     height: 60px;
-    background-color: #ffffff;
-    /* outline: 2px solid red; */
+    background-color: var(--color-white)
 }
 
 .navbar-1 .logo {
-    /* display: flex; */
-    /* justify-content: center; */
     align-self: center;
-    /* outline: 2px solid blue; */
 }
 
-.marketing ul,.dropdown-about-lang-publicity ul,.social-media-links ul {
+.marketing ul,
+.dropdown-about-lang-publicity > ul,
+.social-media-links > ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,32 +38,99 @@
     padding: 0 5px;
 }
 
-.navbar-1 > div:nth-child(2) {
+.navbar-1>div:nth-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.navbar-1 .dropdown-about-lang-publicity a, .navbar-1 .marketing a{
+.navbar-1 .dropdown-about-lang-publicity a,
+.navbar-1 .marketing a {
     text-decoration: none;
-    color: gray;
+    color: var(--color-nb1-text);
     opacity: 50%S;
     transition: color 0.2s;
     font-weight: 500;
 }
 
-.navbar-1 .dropdown-about-lang-publicity a:hover, .navbar-1 .marketing a:hover {
-    color: blue;
+.navbar-1 .dropdown-about-lang-publicity a:hover,
+.navbar-1 .marketing a:hover {
+    color: var(--color-nb2-bg);
+}
+
+.dropdown-about-lang-publicity .dropdown {
+    position: relative;
+}
+
+.dropdown-about-lang-publicity ._hide {
+    display: none;
+    position: absolute;
+    background-color: var(--color-white);
+    z-index: 1;
+}
+
+.dropdown-about-lang-publicity ._hide li {
+    padding: 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    
+}
+
+.dropdown-about-lang-publicity .dropdown:hover ._hide {
+    display: block;
 }
 
 .navbar-1 .divider {
-    opacity: 20%;
-}
-
-.social-media-links a {
-    background-color: #b3b4b7;
+    opacity: 25%;
 }
 
 .social-media-links img {
-    width: 20px;
+    width: 25px;
+}
+
+.navbar-2 {
+    display: flex;
+    justify-content: end;
+    padding: 0 20px;
+    background-color: var(--color-nb2-bg)
+}
+
+.navbar-2 div {
+    position: relative;
+    color: var(--color-white);
+    padding: 3px 8px;
+    background-color: var(--color-nb-bg);
+    transition: background-color 0.8s;
+}
+
+.navbar-2 .hide li {
+    list-style: none;
+    padding: 3px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+
+.hide {
+    display: none;
+    position: absolute;
+    left: 0;
+    min-width: max-content;
+    width: auto;
+    padding: 0 5px;
+    margin-top: 3px;
+    background-color: var(--color-nb2);
+}
+
+.navbar-2 div:hover .hide {
+    display: block;
+}
+
+.navbar-2 div:hover {
+    background-color: var(--color-nb2);
+
+}
+
+.navbar-2 .divider {
+    opacity: 50%;
+    color: var(--color-white);
+    align-self: center;
 }
