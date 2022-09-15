@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-1 {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    padding: 15px 20px;
+    height: 60px;
+    background-color: #ffffff;
+    /* outline: 2px solid red; */
+}
+
+.navbar-1 .logo {
+    /* display: flex; */
+    /* justify-content: center; */
+    align-self: center;
+    /* outline: 2px solid blue; */
+}
+
+.marketing ul,.dropdown-about-lang-publicity ul,.social-media-links ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.navbar-1 ul li {
+    list-style: none;
+    padding: 0 5px;
+}
+
+.navbar-1 > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-1 .dropdown-about-lang-publicity a, .navbar-1 .marketing a{
+    text-decoration: none;
+    color: gray;
+    opacity: 50%S;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.navbar-1 .dropdown-about-lang-publicity a:hover, .navbar-1 .marketing a:hover {
+    color: blue;
+}
+
+.navbar-1 .divider {
+    opacity: 20%;
+}
+
+.social-media-links a {
+    background-color: #b3b4b7;
+}
+
+.social-media-links img {
+    width: 20px;
+}
