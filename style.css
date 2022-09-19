@@ -177,7 +177,7 @@
     height: 500px; */
   height: 88vh;
   width: 100%;
-  object-fit:cover;
+  object-fit: cover;
 }
 
 /*css for manual slide navigation*/
@@ -360,21 +360,21 @@
 .lgys h3 {
   position: absolute;
   left: 50%;
-  top:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   font-size: x-large;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* grid */
 
-.animatedGrid{
+.animatedGrid {
   max-width: 100vw;
-  /* outline: 2px solid red; */
-  
+ 
+
 }
 
-.animatedGrid ul{
+.animatedGrid ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -383,7 +383,7 @@
   list-style: none;
 }
 
-.animatedGrid ul li img{
+.animatedGrid ul li img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -410,3 +410,41 @@
   background-color: #9c1f62;
 }
 
+/* animatedGrid */
+.animatedGrid h1 {
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  text-align: center;
+  padding-top: 80px;
+  font-size: xx-large;
+}
+
+.animatedGrid h1, .animatedGrid p {
+  width: 90%;
+  margin: auto;
+}
+
+.animatedGrid p {
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  padding-top: 20px;
+}
+
+.animatedGrid .card-left {
+  transform: translate(100%);
+  transition: transform 1s ease-in-out;
+}
+
+.animatedGrid .card-right {
+  transform: translate(-100%);
+  transition: transform 1s ease-in-out;
+}
+
+.animatedGrid .show {
+  transform: translate(0,0);
+}
+
+.animatedGrid .card {
+  z-index: 1S;
+
+}
