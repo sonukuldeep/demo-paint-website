@@ -28,7 +28,7 @@
 }
 
 .marketing ul,
-.dropdown-about-lang-publicity>ul,
+.dropdown-about-lang-publicity > ul,
 .social-media-links>ul {
   display: flex;
   justify-content: center;
@@ -455,34 +455,22 @@
   background-color: #f0f0f0;
 }
 
-.animatedGrid2 .inner1-img {
-  background-image: url("https://www.nerolac.com/sites/default/files/product-range-listing/img-home-interior_products[1]_9.jpg");
-  height: 400px;
-  width: 100%;
-  background-repeat: no-repeat;
-  transition: transform 1s;
-    transform: scale(1.1,1.1);
-  }
+.animatedGrid2 .inner1-img, .animatedGrid2 .inner2-img {
+  height: 350px;
+  overflow: hidden;
+  margin: 0 auto;
+  object-fit: fill;
+}
+
+.animatedGrid2 .inner1-img img, .animatedGrid2 .inner2-img img {
+  height: 100%;
+  transform: scale(1.1);
   
-  .animatedGrid2 .animatedGrid2-container > div:hover .inner1-img {
-  transform: scale(1,1);
-
+  transition: all 0.5s ease-in-out 0.2s;
 }
 
-.animatedGrid2 .inner2-img {
-  background-image: url("https://www.nerolac.com/sites/default/files/product-range-listing/img-home-exterior-products[1].jpg");
-  width: 100%;
-  height: 400px;
-  background-repeat: no-repeat;
-  transition: background-size 1s;
-  /* transform: scale(1.1,1.1); */
-  background-size: 110%;
-}
-
-.animatedGrid2 .animatedGrid2-container > div:hover .inner2-img {
-  background-size: 100%;
-
-
+.animatedGrid2 .inner1-img:hover img, .animatedGrid2 .inner2-img:hover img {
+  transform: scale(1);
 }
 
 .animatedGrid2-container {
@@ -490,9 +478,9 @@
   justify-content: space-between;
 }
 
-.animatedGrid2-container>div {
+.animatedGrid2-container > div {
   width: 48.5%;
   height: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: var(--color-white);
 }
