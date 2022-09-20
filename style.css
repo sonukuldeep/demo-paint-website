@@ -522,7 +522,7 @@
 
 .animatedGrid2 .animatedGrid2-sub-section2 div img {
   width: 100%;
-  margin: 2rem auto;
+  margin: 0 auto;
 
 }
 
@@ -558,4 +558,72 @@
   padding: 1rem;
   font-size: larger;
   padding-bottom: 5rem;
+}
+
+/* footer design*/
+
+footer {
+  background-color: #222222;
+}
+
+footer .main {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+footer .main .variousLinks {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+footer .main li {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+
+footer .main li:hover a{
+  color: #d1c7c7
+}
+
+footer .main a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: 500;
+}
+
+.signupAndSocial #email {
+  width: 15rem;
+  height: 2rem;
+  text-align: center;
+  background-color: grey;
+  border: 1px solid black;
+  outline: none;
+}
+
+.more-links {
+  display: flex;;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.more-links ul:nth-child(1) {
+  display: flex;
+  justify-content: space-evenly;
+  width: 800px;
+}
+
+.more-links ul li {
+  list-style: none;
+  color: white;
+}
+
+.more-links a {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
 }
