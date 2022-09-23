@@ -14,9 +14,9 @@
 
 // carousel start
 // getting important classes
-const track = document.querySelector(".carousel__track");
+const track = document.querySelector("#carousel__track");
 const slides = Array.from(track.children);
-const dotsNav = document.querySelector(".carousel__nav");
+const dotsNav = document.querySelector("#carousel__nav");
 const dots = Array.from(dotsNav.children);
 // nextSlide variable stores clicked position to resume auto scroll from
 let nextSlide = 0;
@@ -24,11 +24,12 @@ let nextSlide = 0;
 // initially positioning all slides horizentally
 slides.forEach((slide, index) => {
   slide.style.left = slide.getBoundingClientRect().width * index + "px";
+  console.log(slide)
 });
 
 // remove currentSlide class on old slide and adding the same to a new one
 const setCurrentSlideClass = (index) => {
-  const currentSlide = dotsNav.querySelector('.current-slide')
+  const currentSlide = dotsNav.querySelector('#carousel__nav .current-slide')
   currentSlide.classList.remove('current-slide')
   dots[index].classList.add('current-slide')
   nextSlide = index;
@@ -46,7 +47,7 @@ dots.forEach((dot,index) => {
   dot.addEventListener('click', e=> {shiftSlide(index)})
 })
 
-// this code below makes automatic scroll function
+// this code below makes automatic scroll possible
 const numberOfSlides = slides.length
 let posOrNeg = 1;
 setInterval(()=>{
