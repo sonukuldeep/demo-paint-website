@@ -1,16 +1,7 @@
 
-
-// let counter = 0;
-// let smartCount = 1;
-// setInterval(() => {
-//     counter +=smartCount;
-//     const wp = document.getElementById('radio'+counter).checked = true;
-    
-//     // console.log(counter)
-//     if(counter === 7) smartCount = -1
-//     if(counter === 1) smartCount = 1
-
-// }, 5000);
+const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+console.log(vw/vh)
 
 // carousel start
 // getting important classes
@@ -24,7 +15,7 @@ let nextSlide = 0;
 // initially positioning all slides horizentally
 slides.forEach((slide, index) => {
   slide.style.left = slide.getBoundingClientRect().width * index + "px";
-  console.log(slide)
+  // console.log(slide)
 });
 
 // remove currentSlide class on old slide and adding the same to a new one
@@ -65,9 +56,9 @@ const observer = new IntersectionObserver(entries=>{
   entries.forEach(entry=>{
     entry.target.classList.toggle('show',entry.isIntersecting)
 
-    // console.log(entry.target.classList,entry.isIntersecting)
+    console.log(entry.target.classList,entry.isIntersecting)
   })
-},{threshold: 0.5,})
+},{threshold: (vw/vh < 1) ? 0 : 0.5})
 
 cards.forEach(card=>{
   observer.observe(card)
