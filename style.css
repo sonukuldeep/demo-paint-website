@@ -13,6 +13,10 @@
 
 /* first navbar css */
 
+.fa-solid-color {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .navbar-1 {
   display: flex;
   justify-content: space-between;
@@ -139,6 +143,11 @@
   opacity: 50%;
   color: var(--color-white);
   align-self: center;
+}
+
+/* navbar 3rd */
+.navbar-3 {
+  display: none;
 }
 
 /*  */
@@ -459,7 +468,7 @@
 }
 
 .latestBlogs::before {
-  content:'Latest Blogs';
+  content: 'Latest Blogs';
   display: block;
   padding: 1rem;
   font-size: x-large;
@@ -539,6 +548,15 @@ footer .main a {
   background-color: grey;
   border: 1px solid black;
   outline: none;
+}
+
+.signupAndSocial .social p {
+  color: white;
+  padding-bottom: 10px;
+}
+
+.signupAndSocial .social a {
+  margin: 5px;
 }
 
 .more-links {
@@ -747,14 +765,103 @@ footer .main a {
 /* responsive design */
 
 @media all and (orientation: portrait) {
+
+  .navbar-1,
+  .navbar-2 {
+    display: none;
+  }
+
+  .navbar-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 5vh;
+    background-color: #ffffff;
+    position: relative;
+  }
+
+  .navbar-3 .rightNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    /* position: relative; */
+    /* outline: 2px solid red; */
+    margin-right: 15px;
+  }
+
+  .navbar-3 .logo{
+    width: 35%;
+    margin-left: 15px;
+  }
+
+  .navbar-3 ul {
+    list-style: none;
+  }
+
+  .navbar-3 .rightNav .list {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    left: -5px;
+    min-width: max-content;
+    padding: 0 15px 5px 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 3;
+    border: 2px solid black;
+  }
+  
+  .navbar-3 .rightNav .list li {
+    /* border-bottom: 1px solid black; */
+    border-top: 1px rgba(0, 0, 0, 0.7) solid;
+    padding: 10px 0;
+  }
+
+  .navbar-3 .rightNav .list li:nth-child(1){
+    border-top: none; 
+  }
+
+  .navbar-3 .rightNav .lang {
+    position: relative;
+  }
+
+ .navbar-3 .rightNav .lang:hover .list {
+  display: block;
+ }
+
+  .navbar-3 .more-options .list{
+    display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  .navbar-3 .more-options .list li {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar-3 .more-options:hover .list {
+    display: block;
+  }
+
+  .fa-solid-r45{
+    rotate: -45deg;
+  }
+
+  .navbar-3 a {
+    text-decoration: none;
+  }
+
+/* navbar3 end */
   #carousel {
     height: 50vh;
   }
 
-  .gith h1{
+  .gith h1 {
     font-size: x-large;
   }
-  
+
   .sub-btn input {
     position: absolute;
     top: 50%;
@@ -807,7 +914,9 @@ footer .main a {
     /* justify-content: space-between; */
   }
 
-  .animatedGrid2 .inner1 h1, .animatedGrid2 .inner2 h1, .animatedGrid2-sub-section2 div .inner h1 {
+  .animatedGrid2 .inner1 h1,
+  .animatedGrid2 .inner2 h1,
+  .animatedGrid2-sub-section2 div .inner h1 {
     background-color: #f0f0f0;
     font-size: large;
     text-align: center;
@@ -816,7 +925,9 @@ footer .main a {
     letter-spacing: 2px;
   }
 
-  .animatedGrid2 .inner1 h1, .animatedGrid2 .inner2 h1, .animatedGrid2-sub-section2 div .inner h1 {
+  .animatedGrid2 .inner1 h1,
+  .animatedGrid2 .inner2 h1,
+  .animatedGrid2-sub-section2 div .inner h1 {
     background-color: #f0f0f0;
     font-size: large;
     text-align: center;
@@ -825,7 +936,7 @@ footer .main a {
     letter-spacing: 2px;
   }
 
-  .animatedGrid2-container > div {
+  .animatedGrid2-container>div {
     height: auto;
     width: auto;
     background-color: var(--color-white);
@@ -874,4 +985,6 @@ footer .main a {
     /* justify-content: space-between; */
     width: 60%;
   }
+
+
 }
