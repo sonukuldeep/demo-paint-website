@@ -27,8 +27,8 @@
   background-color: var(--color-white)
 }
 
-.navbar-1 .logo {
-  align-self: center;
+.navbar-1 .logo img{
+  border-radius: 10px;
 }
 
 .marketing ul,
@@ -253,16 +253,24 @@
   margin-top: 8px;
 }
 
-.sub-btn input {
+.sub-btn .animated-btn {
   position: absolute;
-  top: 50%;
+  width: 250px;
+  height: 60px;
+  top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px 70px;
-  font-size: xx-large;
+  transform: translate(-50%, 0);
+  font-size: x-large;
   font-weight: 800;
   background-color: var(--color-nb2);
-  color: var(--color-white);
+  color: #e7004c;
+  border: 1px solid #e7004c;
+  
+}
+
+.sub-btn .animated-btn .symbol {
+  position: absolute;
+  top:0;  
 }
 
 /* article 3 */
@@ -595,7 +603,7 @@ footer .main a {
 }
 
 .floating-btn .center-btn .btn1 button::before {
-  content: url(https://www.nerolac.com/sites/default/files/pallet.png);
+  content: url(./images/pallet.png);
   display: inline-block;
   position: absolute;
   left: 10px;
@@ -607,7 +615,7 @@ footer .main a {
 }
 
 .floating-btn .center-btn .btn2 button::before {
-  content: url(https://www.nerolac.com/sites/default/files/masterpainters.png);
+  content: url(./images/masterpainters.png);
   display: inline-block;
   position: absolute;
   left: 10px;
@@ -661,7 +669,7 @@ footer .main a {
   position: absolute;
   left: 0;
   top: 0;
-  background: url("https://www.nerolac.com/sites/all/themes/bootstrap/images/call-sprite.gif") no-repeat 10px 15px;
+  background: url("./images/call-sprite.gif") no-repeat 10px 15px;
   background-size: 20px;
   border-radius: 0 30px 30px 0;
   background-color: #e7004c;
@@ -794,6 +802,7 @@ footer .main a {
   .navbar-3 .logo{
     width: 35%;
     margin-left: 15px;
+    border-radius: 10px;
   }
 
   .navbar-3 ul {
@@ -862,16 +871,15 @@ footer .main a {
     font-size: x-large;
   }
 
-  .sub-btn input {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 40px;
-    font-size: small;
-    font-weight: 800;
-    background-color: var(--color-nb2);
-    color: var(--color-white);
+  .sub-btn {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sub-btn .animated-btn{
+    font-size: large;
   }
 
   .lgys {
